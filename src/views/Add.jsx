@@ -62,20 +62,18 @@ const Add = () => {
       formData.append('images', img)
     }
 
+  console.log('formData', formData);
     setBusy(true)
     const res = await runAxiosAsync(
       authClient.post("/product/add-new-product", formData, {
         headers: {
           "Content-Type": "multipart/form-data"
         }
-        //   headers: {
-        //     Accept: 'application/json',
-        //    'Content-Type': 'multipart/form-data'
-        //  }
       })
-    )    
+    )
 
-    console.log(res);
+
+    console.log('right here', res);
     setBusy(false)
     if (!res.status) return showMessage({ message: res.data, type: "danger" })
     showMessage({ message: res.data, type: "success" })
@@ -103,6 +101,7 @@ const Add = () => {
       }
     });
   }
+
 
 
   return (

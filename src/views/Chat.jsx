@@ -2,10 +2,11 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import AppHeader from '../component/AppHeader'
 import BackButton from '../ui/BackButton'
+import size from '../utils/size'
 
 const Chat = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <AppHeader backButton={<BackButton />} />
     </View>
   )
@@ -13,4 +14,8 @@ const Chat = () => {
 
 export default Chat
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    padding: size.padding
+  }
+})

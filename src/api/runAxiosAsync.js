@@ -1,4 +1,4 @@
-import { AxiosError } from "axios"
+import axios, { AxiosError } from "axios"
 
 export const runAxiosAsync = async (promise) => {
     try {

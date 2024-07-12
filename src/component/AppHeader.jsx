@@ -6,7 +6,7 @@ import size from '../utils/size'
 const AppHeader = ({ backButton, center, right }) => {
     const { goBack, canGoBack } = useNavigation()
     return (
-        <View>
+        <View style={styles.container}>
             {/* back button */}
             {canGoBack() && <Pressable onPress={goBack}>{backButton}</Pressable>}
             {/* center ui */}
@@ -24,6 +24,6 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
-        padding: size.padding,
+        paddingBottom: 20
     }
 })
